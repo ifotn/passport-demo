@@ -1,0 +1,15 @@
+<%- include ./partials/header.ejs %>
+
+<h1>Admin Home</h1>
+<p>This is a private page.</p>
+
+<p>Welcome <%= user.username %></p>
+
+<h2>Facebook</h2>
+<%= user.name %>
+
+<a href="/" title="Home">Home</a>
+<a href="/auth/logout" title="Log Out">Log Out</a>
+
+</body>
+</html>

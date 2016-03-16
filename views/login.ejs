@@ -1,0 +1,37 @@
+<%- include ./partials/header.ejs %>
+
+<script src="/javascripts/social.js"></script>
+
+<h1 class="fa fa-sign-in">Login</h1>
+<% if (messages.length > 0) { %>
+    <div class="alert alert-danger"><%= messages %></div>
+<% } %>
+
+<form method="post" action="/auth/login">
+    <fieldset class="form-group">
+        <label for="username" class="col-sm-2">Username: *</label>
+        <input name="username" id="username" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="password" class="col-sm-2">Password: *</label>
+        <input name="password" id="password" type="password" required />
+    </fieldset>
+    <div class="col-sm-offset-2">
+        <button class="btn btn-warning">Login</button>
+        <a href="/auth/github" title="GitHub"><img src="/images/git-signin.png" /></a>
+
+        <a href="/auth/facebook" title="Facebook Login"><span class="fa fa-facebook">Facebook</span></a>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+    </div>
+    <div id="status">
+    </div>
+    <hr />
+    <p>Need an account? <a href="/auth/register" title="Register">Register</a></p>
+    <p>Or go <a href="/" title="Home">Home</a></p>
+</form>
+
+</div>
+
+</body>
+</html>

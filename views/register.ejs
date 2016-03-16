@@ -1,0 +1,30 @@
+<% include partials/header.ejs %>
+
+<h1 class="fa fa-lock">Register</h1>
+
+<form method="post" action="/auth/register" id="frmRegister">
+    <fieldset class="form-group">
+        <label for="username" class="col-sm-2">Username: *</label>
+        <input name="username" id="username" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="password" class="col-sm-2">Password: *</label>
+        <input name="password" id="password" type="password" required />
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="confirm" class="col-sm-2">Confirm: *</label>
+        <input name="confirm" id="confirm" type="password" required />
+    </fieldset>
+    <button class="btn btn-warning col-sm-offset-2">Register</button>
+
+    <hr />
+
+    <p>Already have an account? <a href="/auth/login" title="Login">Login</a></p>
+
+    <p>Or go <a href="/" title="Home">Home</a></p>
+
+</form>
+
+<script src="javascripts/scripts.js"></script>
+</body>
+</html>

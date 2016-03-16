@@ -1,0 +1,19 @@
+<%- include ./partials/header.ejs %>
+<div class="jumbotron">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% if (!user) { %>
+
+      Click to <a href="/auth/login" title="Login">Login</a> or <a href="/auth/register" title="Register">Register</a>
+    <% }
+    else { %>
+    <div>
+        <p>Welcome <%= user.username %></p>
+        <a href="/admin" title="Admin"><button type="button" class="btn btn-warning">Admin Area</button></a>
+    </div>
+    <% } %>
+</div>
+
+  </body>
+</html>

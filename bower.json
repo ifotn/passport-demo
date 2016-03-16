@@ -1,0 +1,18 @@
+{
+  "name": "passport-demo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "ifotn <rich@infrontofthenet.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ifotn/passport-demo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
